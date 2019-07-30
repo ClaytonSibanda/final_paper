@@ -3,15 +3,16 @@
 An network/internet measurement platform is an infrastructure of dedicated probes that periodically run network measurement tests on the internet/network\cite{7076582}.
 
 \paragraph{}
- Network measurement platforms from the perspective of end systems normally play an important role both for researchers who want to develop general insight into how the Internet functions, and for general users who want to diagnose individual performance issues \cite{Dhawan:2012:FBN:2398776.2398786}. Use cases of these measurement platforms vary widely based on the type of a user and the end goal of the measurement \cite{Ford:2018:RWR:3243157.3243167}. One example of a use case is how in  previous studies these platforms have been employed to understand the overall network topology of the internet\cite{7076582}.
+ Network measurement platforms from the perspective of end systems normally play an important role both for researchers who want to develop general insight into how the Internet functions, and for general practitioners who want to diagnose individual performance issues \cite{Dhawan:2012:FBN:2398776.2398786}. Use cases of these measurement platforms vary widely based on the type of a user and the end goal of the measurement \cite{Ford:2018:RWR:3243157.3243167}. One example of a use case is how in  previous studies these platforms have been employed to understand the overall network topology of the internet\cite{7076582}.
 \paragraph{}
 For managers and regulators measurement platforms can provide a different view of the internet e.g routing, topology, addressing and naming, security, dataplane performance or impairment and traffic matrices\cite{Ford:2018:RWR:3243157.3243167}.
 \paragraph{}
-In some cases these platforms are used to detect anomalous behaviour in the network which could be caused by users abusing the network or general cyber attacks. Internet service providers(ISP) on the other hand use monitoring platforms to evaluate the Quality of Service(QoS) experienced by their users\cite{7076582}. Consumers can also use such measurements to confirm whether the ISP is living up to its Service-Level Agreement(SLA) offers.
-
+In some cases these platforms are used to detect anomalous behaviour in the network which could be caused by users abusing the network or general cyber attacks. Internet service providers(ISP) on the other hand use monitoring platforms to evaluate the Quality of Service(QoS) experienced by their users\cite{7076582}. Consumers can also use such measurements to confirm whether the ISP is living up to its Service-Level Agreement(SLA) offers \cite{7076582}.
+\paragraph{}
+In general measurement platforms are said to provide the engineering to bridge the gap between practice and research in terms of coordination to allow a measurement to scale  and representation producing simple and useful results \cite{Ford:2018:RWR:3243157.3243167}.
 \subsection{Quality Of Service}
 Quality of Service(QoS) is concerned about the network
-delivery capacity and resource availability to users. In
+delivery capacity and resource availability to users\cite{5430142}. In
 other words one would say QoS is about fast internet
 access for the user and low latency. 
 \paragraph{}
@@ -19,11 +20,19 @@ However there are many non-uniform views about QoS by different
 stakeholders. Some say QoS refers to the ability of the
 network to offer packet transfer in a faster way \cite{5430142}.
 \paragraph{}
-At the same time other organisations have maintain that
-QoS has to do with service quality for the user. These
-two different views raise questions of how network level QoS measurements and control relate to the user perception of a service \cite{5430142}.
+At the same time other organisations have maintained that
+QoS has to do with the degree of conformance to user-specified needs \cite{article}. These two different views raise questions of how network level QoS measurements and control relate to the user perception of a service \cite{5430142}.
 \paragraph{}
 The two main QoS parameters are network latency
 and delivery speed(bandwidth) \cite{5430142}. As a result QoS is
 considered poor if any of them is affected from their normal position i.e if bandwidth is low or if latency is high.
+\subsection{Community Networks}
+Community networks are IP-based networks that are built, operated and owned by communities of citizens. These networks are sometimes ran by non-profit organisations working together with local stakeholders in the community. 
+
+Other scholars define them as large scale, self-organized and decentralized networks, built and operated by citizens for citizens \cite{Braem:2013:CRC:2500098.2500108}.
+\paragraph{}
+These networks are normally built as a mixture of both wireless and wired links. This calls for different routing and systems and protocols to be employed in these networks. In some cases there many wireless links with a limited number of wired links. This makes them predominantly wireless networks\cite{Braem:2013:CRC:2500098.2500108}.
+\paragraph{}
+Providing connectivity to community networks can be a challenging task since nodes use diverse access technologies and display a great deal of mobility \cite{Plagemann2008}.
+Due to their non-standard architecture and the use of diverse technology it has proven to be difficult to deploy conventional network measurement platforms on community networks.
 
