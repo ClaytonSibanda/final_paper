@@ -55,4 +55,81 @@ The feedback from the first prototype was gathered and put together for the next
 \subsubsection{Implementation}
 Based on the feedback gathered from the previous phase, it was decided that the development of the actual user interface be started. The user interface was designed to be a responsive web based system that the user can use comfortably on their mobile devices.
 \paragraph{}
-React, a JavaScript front end framework was chosen for the development of the web interface.
+React, a JavaScript front end framework was chosen for the development of the web interface. With over two million developers using React, it is currently one of the most used frontend frameworks in web development\cite{githubreact}. It is also developed by Facebook which makes it a very reliable and stable framework with a lot of support for developers\cite{githubreact}. As a result the use of React ensured that the web interface was developed in the minimum amount of time. A chart library called ReChart was used to produce graphs to display measurement results.
+\paragraph{}
+The web interface was then connected to a Java based request handler. The request handler was used to handle writing and reading requests sent by users from the web interface. Image on Figure 3 shows how the whole system was connected together.
+\begin{figure*}
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/system}
+	\caption{Image of the system showing how the visualiser was connected to everything}
+	\label{fig:system}
+\end{figure*}
+
+
+\subsubsection{Evaluation}
+A second usability study was carried out during this phase. This would allow users to evaluate an actual web interface that is interactive and deals with real world data.
+\paragraph{}
+Users we allowed to go through the visualiser following different instructions which involved saying what they were doing while going through it. They were also observed while performing different tasks. The team was particularly interested in their reactions, emotions and hurdles as they performed different tasks.
+\paragraph{}
+At the end of the study, users were interviewed about their experience with the visualiser. They were also given a Google form with a few questions to fill anonymously.
+
+\subsection{Final Visualisation Design}
+The final visualisation design was designed based on the feedback received from the two previous phases to ensure the satisfaction of users. On top of using Reactjs to ease development, CSS bootstrap was used to ease the styling of the web interface and to make it responsive. This ensured that user experience is consistent across all devices with highest priority given to mobile ones. 
+\paragraph{}
+The visualiser has two parts to it, first a part where users can schedule measurements(measurement initiator) and part where they can view results of the past measurements(data visualiser). Users can schedule any of the five measurements which are trace route, ping , DNS lookup, HTTP and TCP  Speed Test. 
+\paragraph{}
+The measurement part of the visualizer therefore has five modes. On changing to a new mode, the user interface gives feedback to the user by changing the title of the measurement type. This is consistent with Shneiderman's eight golden rules of design\cite{Shneiderman:2016:DUI:3033040}. Feedback is also given to the user by highlighting the measurement type selected on the side bar. 
+\paragraph{}
+The form contains six fields for different inputs. To adhere to the eight golden rules of design, all the forms have constraints on them to prevent errors. For example the date-time form can only take a date later than a specified date and also the job interval form can only take numbers\cite{Shneiderman:2016:DUI:3033040}.
+There are  Figure 4. how this would look like to the user. 
+
+\begin{figure}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{images/http}
+		\caption{HTTP mode}
+		\label{fig:sfig1}
+	\end{subfigure}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{images/ping}
+		\caption{ping mode}
+		\label{fig:sfig2}
+	\end{subfigure}
+	\begin{subfigure}{.5\textwidth}
+	\centering
+	\includegraphics[width=.8\linewidth]{images/troute}
+	\caption{traceroute mode}
+	\label{fig:sfig3}
+\end{subfigure}
+	\begin{subfigure}{.5\textwidth}
+	\centering
+	\includegraphics[width=.8\linewidth]{images/dlookup}
+	\caption{DNS lookup mode}
+	\label{fig:sfig4}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+	\centering
+	\includegraphics[width=.8\linewidth]{images/tcp}
+	\caption{TCP speed test mode}
+	\label{fig:sfig5}
+\end{subfigure}
+	\caption{Different modes of the measurement page}
+	\label{fig:fig}
+\end{figure}
+
+\paragraph{}
+The second part of the visualizer the results page. Like the measurement page, it follows a multi modal design where a user can toggle between modes. This ensures consistency across the user interface\cite{goldenrules}. It also maintains the same colours schemes like the first part of the visualiser. A side bar to select a different result type was also added to this page. Highlighting a selected item is still done for feedback.
+\paragraph{}
+On selecting the result type, a user is presented with a detailed view of the measurement results. At the top of the list is a button that is used to toggle between graph view and detailed view of the results. On selecting the graph, the text on the button changes from "show detail" to "show graph" hence giving meaningful feedback to the user. Figure 5. shows how this was implemented. T
+
+
+
+
+
+
+
+
+
+
+
