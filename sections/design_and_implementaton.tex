@@ -46,53 +46,54 @@ After weeks of designing the prototype, four potential users were invited from t
 \paragraph{}
 A usability study which involved semi-structured interviews was carried out with potential users. Users were allowed to go through the app and encouraged to be talking and pointing out what they are doing at each stage. While this was happening the team was observing users, their facial reaction and what they are saying. At beginning of each session the user will be presented with the first page of the app and they were encouraged to navigate through the app from there on and perform different operations. To avoid bias, users did the testing of the application separately.
 \paragraph{}
-At the end of each session the users were asked to provide feedback in written form. Results indicated that three out of four users found the application not difficult to use and the same number said that the application would be useful to the community. On top of the that some users suggested new features which they thought would be very useful if incorporated into the application.
+At the end of each session the users were asked to provide feedback in written form. Results indicated that three out of four users found the application not difficult to use and the same number said that the application would be useful to the community. 
+\paragraph{}
+Among all the users that took part, 50\% of them found the app to be easy to navigate. When asked if the app provided enough information most of them said yes and made suggestion on top of that.
 
 \subsection{Global Specification}
 In this phase, solutions that have been developed are proposed and presented to users and stakeholders\cite{Kulykinbook}.
 \subsubsection{Analysis and Requirements Gathering}
-The feedback from the first prototype was gathered and put together for the next phase of the design approach. This feedback was to be used to command the initial design of the actual application.
+The feedback from the first prototype was gathered and put together for the next phase of the design. This feedback was to be used to command the initial design of the actual application. 
+\paragraph{}
+One of the features wanted by users was to be able to zoom into the graph and focus on a smaller section of the time line which was implemented in the next iterations.
+\paragraph{}
+Some users wanted the interface to be made colourful by adding bright backgrounds,however this was not implemented. This because we wanted to follow Jakob Neilson's aesthetic and minimalist usability heuristic which states that "don't show irrelevant or rarely needed information which might diminish the relevance of the important ones"\cite{Nielsen:1992:FUP:142750.142834}.
 \subsubsection{Implementation}
 Based on the feedback gathered from the previous phase, it was decided that the development of the actual user interface be started. The user interface was designed to be a responsive web based system that the user can use comfortably on their mobile devices.
 \paragraph{}
 React, a JavaScript front end framework was chosen for the development of the web interface. With over two million developers using React, it is currently one of the most used frontend frameworks in web development\cite{githubreact}. It is also developed by Facebook which makes it a very reliable and stable framework with a lot of support for developers\cite{githubreact}. As a result the use of React ensured that the web interface was developed in the minimum amount of time. A chart library called ReChart was used to produce graphs to display measurement results.
 \paragraph{}
-The web interface was then connected to a Java based request handler. The request handler was used to handle writing and reading requests sent by users from the web interface. Image on Figure 3 shows how the whole system was connected together.
-\begin{figure*}
-	\centering
-	\includegraphics[width=0.7\linewidth]{images/system}
-	\caption{Image of the system showing how the visualiser was connected to everything}
-	\label{fig:system}
-\end{figure*}
-
+For the purposes of evaluation, a lot of dummy data was generated and presented on the visualiser as it would when real data is displayed.
 
 \subsubsection{Evaluation}
 A second usability study was carried out during this phase. This would allow users to evaluate an actual web interface that is interactive and deals with real world data.
 \paragraph{}
-Users we allowed to go through the visualiser following different instructions which involved saying what they were doing while going through it. They were also observed while performing different tasks. The team was particularly interested in their reactions, emotions and hurdles as they performed different tasks.
+Users were allowed to go through the visualiser following different instructions which involved saying what they were doing while going through it. They were also observed while performing different tasks. The team was particularly interested in their reactions, emotions and hurdles as they performed these tasks.
 \paragraph{}
-At the end of the study, users were interviewed about their experience with the visualiser. They were also given a Google form with a few questions to fill anonymously.
-
+At the end of the study, users were interviewed about their experience with the visualiser. They were also given a Google form with a few questions to fill anonymously. The form was used as a system usability score questionnaire to evaluate the usability of the visualiser. As much as the scale can be used to measure usability scores, we cannot use to diagnose usability problems\cite{inproceedingsSauro}. As a result a number of free-response questions were included.
 \subsection{Final Visualisation Design}
 The final visualisation design was designed based on the feedback received from the two previous phases to ensure the satisfaction of users. On top of using Reactjs to ease development, CSS bootstrap was used to ease the styling of the web interface and to make it responsive. This ensured that user experience is consistent across all devices with highest priority given to mobile ones. 
 \paragraph{}
-The visualiser has two parts to it, first a part where users can schedule measurements(measurement initiator) and part where they can view results of the past measurements(data visualiser). Users can schedule any of the five measurements which are trace route, ping , DNS lookup, HTTP and TCP  Speed Test. 
+The visualiser is to be used by two sets of users hence it has two parts to it, first a part where researchers can schedule measurements(measurement initiator) and view results of the past measurements(data visualiser). The second is also part of the data visualiser but its for end users, it allows them to view the top apps that use most of their data and the most frequent websites which they visit.
 \paragraph{}
-The measurement part of the visualizer therefore has five modes. On changing to a new mode, the user interface gives feedback to the user by changing the title of the measurement type. This is consistent with Shneiderman's eight golden rules of design\cite{Shneiderman:2016:DUI:3033040}. Feedback is also given to the user by highlighting the measurement type selected on the side bar. 
+Researchers and network managers can schedule any of the five measurements which are trace route, ping , DNS lookup, HTTP and TCP  Speed Test. 
 \paragraph{}
-The form contains six fields for different inputs. To adhere to the eight golden rules of design, all the forms have constraints on them to prevent errors. For example the date-time form can only take a date later than a specified date and also the job interval form can only take numbers\cite{Shneiderman:2016:DUI:3033040}.
-There are  Figure 4. how this would look like to the user. 
+The measurement part of the visualizer therefore has five modes. On changing to a new mode, the user interface gives feedback to the user by changing the title of the measurement type at the top. This is consistent with Shneiderman's eight golden rules of design\cite{Shneiderman:2016:DUI:3033040}. Feedback is also given to the user by highlighting the measurement type selected on the side bar. 
+\paragraph{}
+The form contains six fields for different inputs. To adhere to the eight golden rules of design, all the forms have constraints on them to prevent errors. For example the date-time form can only take a date later than a specified date and also the job interval form can only take numbers\cite{Shneiderman:2016:DUI:3033040}. Figure 4. shows the five different modes of the measurement part of the visualiser. 
+\paragraph{}
+To perform a measurement, the researcher will fill the respective form. They then click submit to schedule the measurement. If successful, a green pop up is shown at the top affirming a successful action as shown on fig 4a. If not successful, a red one is displayed as shown on fig 4b. This is done so a to give meaningful feedback to the user\cite{Shneiderman:2016:DUI:3033040}.
 
 \begin{figure}
 	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=.8\linewidth]{images/http}
+		\includegraphics[width=.8\linewidth]{images/fdhttp}
 		\caption{HTTP mode}
 		\label{fig:sfig1}
 	\end{subfigure}
 	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=.8\linewidth]{images/ping}
+		\includegraphics[width=.8\linewidth]{images/feedback2}
 		\caption{ping mode}
 		\label{fig:sfig2}
 	\end{subfigure}
@@ -119,9 +120,27 @@ There are  Figure 4. how this would look like to the user.
 \end{figure}
 
 \paragraph{}
-The second part of the visualizer the results page. Like the measurement page, it follows a multi modal design where a user can toggle between modes. This ensures consistency across the user interface\cite{goldenrules}. It also maintains the same colours schemes like the first part of the visualiser. A side bar to select a different result type was also added to this page. Highlighting a selected item is still done for feedback.
+The second part of the visualizer is the results page. Like the measurement page, it follows a multi modal design where a user can toggle between modes. This ensures consistency across the user interface\cite{goldenrules}. It also maintains the same colour schemes like the first part of the visualiser. A side bar to select a different result type was also added to this page. Highlighting a selected item is still done for feedback.
 \paragraph{}
-On selecting the result type, a user is presented with a detailed view of the measurement results. At the top of the list is a button that is used to toggle between graph view and detailed view of the results. On selecting the graph, the text on the button changes from "show detail" to "show graph" hence giving meaningful feedback to the user. Figure 5. shows how this was implemented. T
+On selecting the result type, a user is presented with a detailed view of the measurement results. At the top of the list is a button that is used to toggle between graph view and detailed view of the results. On selecting the graph, the text on the button changes from "show detail" to "show graph". Figure 5. shows how this was implemented. 
+\paragraph{}
+The graphs show how different network parameters change over time. At the bottom is a wide grey bar, which the user can use to zoom in to focus on a smaller section of the date axis. On hovering over the graph, certain parameters of the graph are displayed showing the actual values and other parameters not shown on the graph. The user also has an option to view a detailed view of the results which is a list of results in a JSON format.
+\begin{figure}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{images/httpGraph}
+		\caption{Graph showing http results}
+		\label{fig:sfig7}
+	\end{subfigure}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{images/pingGraph}
+		\caption{Graph showing ping results}
+		\label{fig:sfig8}
+	\end{subfigure}
+	\caption{Image showing http and ping measurement results}
+\label{fig:fig1}
+\end{figure}
 
 
 

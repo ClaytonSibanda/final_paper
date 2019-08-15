@@ -1,7 +1,7 @@
 \section{Limitations}
 \subsection{Usability Tests}
 \subsubsection{Participants}
-Taking the approach of User-Center Design means that the right users should be sourced. The right type of users in this case were  potential and targeted users. These users need to be easily reachable and available throughout all the design phases. This means that most of our users had to be community members at Ocean View and be users of the iNethi network. Sourcing a large number of participants with a networking domain knowledge was challenging. Some participants were not comfortable with using computers. As result not all visualisation functionalities could be tested with them.
+Taking the approach of User-Center Design means that the right users should be sourced and involved in the design process. These users need to be easily reachable and available throughout all the design phases. This means that most of our users had to be community members at Ocean View and be users of the iNethi network. Sourcing a large number of participants with a networking domain knowledge was a challenging endeavour. Some participants were not comfortable with using computers and later on navigating a website. As result not all visualisation functionalities could be tested with them.
 \paragraph{}
 Since the platform also allows researchers to perform measurements on the network, hence some of our potential users were computer science students and academics. One of the requirements would be for them to be familiar with the iNethi network or any community network. At the end it proved to be a challenge to source students who had past experience with the iNethi network or any community network.
 \paragraph{}
@@ -14,5 +14,11 @@ This limitation brings to light the difference between usability(as it refers to
 \paragraph{}
 The are many factors that could affect the data, some of them include the way in which it is presented and noise during the collection of data. In this project measurements for different networking protocols and tools were ran. Some of them like TCP have a lot of parameters. Given that a graph cannot display all the parameters that a protocol has, some of them were discarded and not displayed. To counteract this loss, a detailed view of all the measurements was included.
 \paragraph{}
-The way in which the data is structured also affects the effectiveness of a visualiser. It does so by allowing end-users to make assumptions about the type and amount of data delivered. These assumptions can affect the decisions drawn from the visualiser by end-users\cite{Knight2001}. The data for this project is collected and written to InfluxDB, a time series database so as to collect data continuously in real time. The data is then written to MongoDB, a nosql database that allows the storing of unstructured data. The visualiser therefore displays data that is queried from MongoDB. The data is formatted before being sent to the web interface, and this has significant effect on how the data is presented to the user.
+The way in which the data is structured also affects the effectiveness of a visualiser. It does so by allowing end-users to make assumptions about the type and amount of data delivered. These assumptions can affect the decisions drawn from the visualiser by end-users\cite{Knight2001}. 
+\paragraph{}
+The data for this project is collected and written to InfluxDB, a time series database which is designed to handle real time data. The data is then written to MongoDB, a nosql database that allows the storing of unstructured data.
+\paragraph{}
+The visualiser therefore displays data that is queried from MongoDB. The data is formatted before being sent to the web interface, and this has significant effect on how the data is presented to the user.
+\paragraph{}
+
 
