@@ -1,39 +1,26 @@
 \section{Literature Review}
-\subsection{Prominent network measurement platforms}
-There are a number of network measurement software
-that are currently deployed to monitor and observe patterns in different networks.
-\paragraph{}
-The first one that we discuss is PerfSONAR(Performance focused
-Service Oriented Network monitoring ARchitecture)\cite{10.1007/11596141_19}. This is a service infrastructure that is web based and is used to collect and publish network performance monitoring\cite{article2}. Its main goal is to make it easy to handle end-to-end performance problems on paths going through several networks \cite{article2}. It does this by using a set of services to deliver performance measurements to an agreed upon network environment.
+\subsection{Prominent Network Measurement Platforms}
+There are a number of network measurement platforms that are currently deployed to monitor and observe patterns in different networks. The first one that we discuss is PerfSONAR (Performance focused Service Oriented Network monitoring ARchitecture)\cite{10.1007/11596141_19}. This is a service infrastructure that is web based and is used to collect and publish network performance data\cite{article2}. Its main goal is to make it easy to handle end-to-end performance problems on paths going through several networks \cite{article2}. It does this by using a set of services to deliver performance measurements to an agreed upon network environment. PerfSONAR is mainly tailored for National Research and Education Networks (NRENs) hence it cannot be used in small community networks.
 
 \paragraph{}
-LiveLab is a method used to measure smartphone usage in the field and to measure wireless networks through smartphone users\cite{article3}. This platform employs a tool that is custom built for Iphones only to enable researchers to track users in the field. LiveLab also provides a comprehensive in-device logging of smartphone usage and measurement of wireless
-networks\cite{article3}.The tool takes advantage of the mobility
-of users and the ability of smartphones to switch connections between multiple routers and that way researchers are able to gain large amounts of data\cite{article3}.
-
+LiveLab is a platform used to measure smartphone usage in the field and to measure wireless networks through smartphone users\cite{article3}. This platform employs a tool that is custom built for Iphones only to enable researchers to track users in the field. LiveLab also provides a comprehensive in-device logging of smartphone usage and measurement of wireless networks\cite{article3}.The tool takes advantage of the mobility
+of users and the ability of smartphones to switch connections between multiple routers and that way researchers are able to gain large amounts of data\cite{article3}. LiveLab would have been a great tool to use in this project, however the majority of users at Ocean View are android users.
 \paragraph{}
-RIPE ATLAS is also another tool used extensively
-to measure network performance. It uses thousands of
-distributed probes and anchors as measurement devices.
-The tool can perform IPv4 and IPv6 traceroute, ping,
-DNS, NTP\cite{7076582}.
+The last tool to be explored was Mobiperf. Mobiperf is an android based application that is used to collect mobile network measurements. On the backend it uses a data collection server to collect and aggregate data. The app periodically checks in with the measurement server which sends it a list of measurement tasks to perform. These measurement tasks include ping, trace-route, HTTP GET, DNS lookup, TCP Throughput, IPv4/v6 compatibility check and UDP Burst. Each task is given a respective set of measurement parameters\cite{articleJunxian}. Being an android app, Mobiperf is a great fit for the Ocean View community.
 \paragraph{}
-PlanetLab is a measurement platform used for testing of new network services. However PlanetLab is rather unusable due to unpredictable load issues and tendency of nodes to be located in a national research network\cite{7076582}.
-PeerMetric is a measurement tool used to measure P2P network performance experienced by broadband hosts\cite{7076582}.
+The main problem with using these platforms in community networks is that they are not designed to meet the unique requirements of community networks. Most of them are designed with large corporate networks in mind. Hence deploying them in a community network will not produce desired/effective results.
 \paragraph{}
-Mobiperf is an android based application that is used to collect mobile network measurements. On the backend it uses a data collection server to collect and aggregate data. The app periodically checks in with the measurement server which sends it a list of measurement tasks to perform. These measurement tasks include ping, trace-route, HTTP GET, DNS lookup, TCP Throughput, IPv4/v6 compatibility check and UDP Burst. Each task is given a respective set of measurement parameters.
-
-\subsection{ Challenges with network measurement platforms}
-In some previous studies measurement platforms have been observed to bring about challenges in the into the network.
+As great as measurement platforms are, they do not only bring about solutions to a network.
+Previous studies have shown that network measurement platforms can generally bring about challenges and problems to a network\cite{7076582}.
 \paragraph{}
-One of the most common major challenge is the fact that integrating a platform into a system can bring about cyber security risks. This because some measurement platforms might need admin privileges for them to carry out some measurements. This opens the network into a lot of privacy risks.
+One of the most common major challenge is the fact that integrating a platform into a system can bring about cyber security risks. This is because some measurement platforms might need privileges for them to carry out some measurements. This opens the network to a lot of security risks\cite{7076582}.
 
 \subsection{Visualisation}
-Networks today generate large volumes of data due to a lot of people getting connected to the internet. The numeric nature of such data which consists of packet size, time and other statistical features makes it hard to perceive relationships between the data\cite{Ruan2018}. According to a paper by Ruan et al.[2018], visualisation has proven to be a very imperative tool to capture and display network activities. In some cases visualisation has also made it easy to detect and prevent cyber security threats in the network\cite{inproceedings}.
+Networks today generate large volumes of data due to a lot of people getting connected to the internet. The numeric nature of such data which consists of packet size, time and other statistical features makes it hard to perceive relationships among the data\cite{Ruan2018}. According to a paper by Ruan et al.[2018], visualisation has proven to be a very imperative tool to capture and display network activities. In some cases visualisation has also made it easy to detect and prevent cyber security threats in the network\cite{inproceedings}.
 \paragraph{}
-There are a number of visualisation techniques that are currently used to capture network data. These include pie charts, line graphs and histogram which are the core visualisation methods. However these are not effective for network data which contains more two dimensions\cite{Ruan2018}. Multi-dimensional visualisation methods include scatter plot, hyper graph, force graph and parallel coordinate. Due to the limitation of human vision there is need for dimensionality reduction to be done before visualisation\cite{Ruan2018}. 
+There are a number of visualisation techniques that are currently used to capture network data. These include pie charts, line graphs and histogram which are the core visualisation methods. However, these are not effective for network data which contains more than two dimensions\cite{Ruan2018}. Multi-dimensional visualisation methods include scatter plot, hyper graph, force graph and parallel coordinate. Due to the limitation of human vision, there is need for dimensionality reduction to be done before visualisation\cite{Ruan2018}. 
 \paragraph{}
-The most popular algorithm for dimensionality reduction is principal component analysis(PCA) which implements dimensionality reduction by deriving new features. PCA has multiple applications but also has its own drawbacks, by reducing dimensions we lose some information in the dataset\cite{Ruan2018}.
+The most popular algorithm for dimensionality reduction is principal component analysis(PCA), which implements dimensionality reduction by deriving new features. PCA has multiple applications but also has its own drawbacks. One of them is that by reducing dimensions we lose some information in the dataset\cite{Ruan2018}.
 
 
 
